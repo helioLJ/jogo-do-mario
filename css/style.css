@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 80vh;
+    border-bottom: none;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.floor {
+    height: 20vh;
+    width: 100%;
+}
+
+.grass {
+    background-color: greenyellow;
+    height: 20%;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+}
+
+.dirt {
+    background-color: rgb(222, 184, 135);
+    height: 80%;
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipeAnimation 1.5s infinite linear;
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.clouds {
+    position: absolute;
+    width: 400px;
+    animation: cloudsAnimation 10s infinite linear;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.score {
+    background-color: brown;
+    width: 100px;
+    border-radius: 15px;
+    padding: 25px;
+    position: absolute;
+    top: 200px;
+    right: 200px;
+    text-align: center;
+}
+
+.score p {
+    font-size: 50px;
+    font-weight: 800;
+    color: white;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    background-color: brown;
+    height: 200px;
+    width: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal div {
+    width: 100%;
+}
+
+.modal p {
+    margin-bottom: 30px;
+}
+
+.modal button {
+    width: 25%;
+}
+
+@keyframes pipeAnimation {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes cloudsAnimation {
+    from {
+        right: -400px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
